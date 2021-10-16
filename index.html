@@ -9,19 +9,25 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Login Form | CodingLab</title> -->
+    <!-- <link rel="stylesheet" href="./css/loginStyle.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
   </head>
   <body>
     <section>
       <!--navigation-->
       <nav>
         <!--logo-->
-        <a href="#" class="logo">Sang Nguyen</a>
-        <!--menu-->
+        <label href="#" class="logo">Sang Nguyen</label>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Project</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#login-form-2">Project</a></li>
+          <li><a href="#login-form">Login</a></li>
         </ul>
       </nav>
 
@@ -33,15 +39,84 @@
         <button class="see-cv">See my CV</button>
 
         <!--My image-->
-        <img src="image/Dev_sang.png" class="my-image" alt="my image" />
+        <!-- <img src="image/Dev_sang.png" class="my-image" alt="my image" /> -->
+      </div>
+
+      <!--Login form-->
+      <div class="form-container" id="login-form">
+        <div class="wrapper">
+          <div class="title"><span>Login Form</span></div>
+          <form
+            id="form"
+            class="form"
+            action="login_processing.php"
+            method="post"
+          >
+            <div class="form-controller">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+              <small>Error message</small>
+            </div>
+            <div class="form-controller">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <small>Error message</small>
+            </div>
+            <div class="pass"><a href="#">Forgot password?</a></div>
+            <div class="form-controller button">
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="#">Signup now</a>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+    <!-- 
+    <section>
+      Login form php
+      <div class="form-container-2" id="login-form-2">
+        <div class="wrapper-2">
+          <div class="title-2"><span>Login Form</span></div>
+          <form action="#">
+            <div class="row-2">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Email or Phone" required />
+            </div>
+            <div class="row-2">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="pass-2"><a href="#">Forgot password?</a></div>
+            <div class="row button-2">
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link-2">
+              Not a member? <a href="#">Signup now</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section> -->
     <!--About-->
 
-    <section class="about">
+    <div class="about">
       <div class="about-container">
         <!--Image-->
-        <img src="image/sang.jpg" />
+        <img src="image/Dev_sang.png" />
         <!--Text-->
         <div class="about-text">
           <p>My full name is Nguyen Dinh Sang</p>
@@ -59,7 +134,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
     <!--Service-->
     <!--services-container---------------------------->
@@ -82,7 +157,7 @@
             I want to make mobile applications is easy to use, help people in
             our community.
           </p>
-          <button>Read More</button>
+          <button>Read more</button>
         </div>
         <!--2------------->
         <div class="box-2">
@@ -92,7 +167,7 @@
             I want to make mobile applications is easy to use, help people in
             our community.
           </p>
-          <button>Read More</button>
+          <button>Read more</button>
         </div>
         <!--3------------->
         <div class="box-3">
@@ -102,7 +177,7 @@
             I want to make mobile applications is easy to use, help people in
             our community.
           </p>
-          <button>Read More</button>
+          <button>Read more</button>
         </div>
       </div>
     </div>
@@ -138,15 +213,6 @@
       <p class="copyright">Copyright by Sang Nguyen</p>
     </footer>
 
-    <!--JQUery-------------------->
-    <script type="text/javascript" src="js/JQuery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $(".toggle").click(function () {
-          $(".toggle").toggleClass("active");
-          $("nav").toggleClass("active");
-        });
-      });
-    </script>
+    <script src="./login/validation.js"></script>
   </body>
 </html>
