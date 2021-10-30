@@ -18,6 +18,7 @@
      <?php 
      $page = "home";
      if (isset($_GET["page"])) {$page = $_GET["page"];}
+     if (isset($_POST["page"])) {$page = $_POST["page"];}
      ?>
 
      <?php 
@@ -35,32 +36,6 @@
 
              <!--My image-->
              <!-- <img src="image/Dev_sang.png" class="my-image" alt="my image" /> -->
-         </div>
-
-         <!--Login form-->
-         <div class="form-container" id="login-form">
-             <div class="wrapper">
-                 <div class="title"><span>Login Form</span></div>
-                 <form id="form" class="form" action="login_processing.php" method="post">
-                     <div class="form-controller">
-                         <i class="fas fa-user"></i>
-                         <input type="text" id="email" name="email" placeholder="Email address" required />
-                         <small>Error message</small>
-                     </div>
-                     <div class="form-controller">
-                         <i class="fas fa-lock"></i>
-                         <input type="password" id="password" name="password" placeholder="Password" required />
-                         <small>Error message</small>
-                     </div>
-                     <div class="pass"><a href="#">Forgot password?</a></div>
-                     <div class="form-controller button">
-                         <input type="submit" value="Login" />
-                     </div>
-                     <div class="signup-link">
-                         Not a member? <a href="#">Signup now</a>
-                     </div>
-                 </form>
-             </div>
          </div>
          </section>
 
