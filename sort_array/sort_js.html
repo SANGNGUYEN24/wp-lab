@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin-left: 48px;
+            }
+        </style>
+    </head>
+<body>
+
+<h2>Using JavaScript to sort a sequece of numbers</h2> <br>
+<h3>Original sequence:</h3>
+<p id="origin"></p>
+<h3>Minimum value: </h3><p id = "minimum"></p>
+<h3>Maximum value: </h3><p id = "maximum"></p>
+<h3>After sorting (ascending):</h3>
+<p id="asc"></p>
+<h3>After sorting (descending):</h3>
+<p id="desc"></p>
+
+<script>
+const points = [5, 43, 59, 76, 54, 65, 25, 5, 34, 25, 52, 8, 85, 91, 48, 97, 58, 91, 71, 40, 34, 82, 8, 57, 1, 92, 90, 48, 87, 23, 26, 64, 72, 24, 60, 11, 29, 46, 44, 15, 53, 62, 45, 54, 71, 79, 34, 94, 24, 45];
+document.getElementById("minimum").innerHTML = Math.min(...points);
+document.getElementById("maximum").innerHTML = Math.max(...points);
+document.getElementById("origin").innerHTML = points;
+points.sort(function(a, b){return a-b});
+document.getElementById("asc").innerHTML = points;
+points.sort(function(a, b){return b-a});
+document.getElementById("desc").innerHTML = points;
+</script>
+
+</body>
+</html>
